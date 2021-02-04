@@ -290,6 +290,8 @@ class RecordStore(object):
     def store_recordmap(self, recordmap):
         print(recordmap)
         for table, records in recordmap.items():
+            print(table)
+            print(records)
             for id, record in records.items():
                 self._update_record(
                     table, id, value=record.get("value"), role=record.get("role")
