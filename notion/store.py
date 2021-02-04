@@ -288,6 +288,7 @@ class RecordStore(object):
         self.store_recordmap(recordmap)
 
     def store_recordmap(self, recordmap):
+        print(recordmap)
         for table, records in recordmap.items():
             for id, record in records.items():
                 self._update_record(

@@ -146,7 +146,7 @@ Note: For convenience, we automatically map the database "columns" (aka properti
 # Access a database using the URL of the database page or the inline block
 cv = client.get_collection_view("https://www.notion.so/myorg/8511b9fc522249f79b90768b832599cc?v=8dee2a54f6b64cb296c83328adba78e1")
 
-# List all the records with "Bob" in them
+# SmartListRow all the records with "Bob" in them
 for row in cv.collection.get_rows(search="Bob"):
     print("We estimate the value of '{}' at {}".format(row.name, row.estimated_value))
 
