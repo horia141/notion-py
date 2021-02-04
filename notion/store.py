@@ -288,10 +288,9 @@ class RecordStore(object):
         self.store_recordmap(recordmap)
 
     def store_recordmap(self, recordmap):
-        print(recordmap)
         for table, records in recordmap.items():
-            print(table)
-            print(records)
+            if table == "__json__":
+                continue
             for id, record in records.items():
                 self._update_record(
                     table, id, value=record.get("value"), role=record.get("role")
