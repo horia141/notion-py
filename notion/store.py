@@ -277,8 +277,12 @@ class RecordStore(object):
 
         data = {
             "pageId": page_id,
-            "limit": 1000,
-            "cursor": {"stack": []},
+            "limit": 100000,
+            "cursor": {"stack": [[{
+                "table": "block",
+                "id": page_id,
+                "index": 1
+            }]]},
             "chunkNumber": 0,
             "verticalColumns": False,
         }
