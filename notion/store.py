@@ -277,7 +277,7 @@ class RecordStore(object):
 
         data = {
             "pageId": page_id,
-            "limit": 100000,
+            "limit": 30,
             "cursor": {"stack": [[{
                 "table": "block",
                 "id": page_id,
